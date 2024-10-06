@@ -1,0 +1,133 @@
+% Template for producing ESWA-format journal articles using LaTeX    
+% Written by Miha Ravber                
+% Programming methodologies laboratory                    
+% Faculty of Electrical Engineering and Computer Science 
+% University of Maribor                              
+% Koroška cesta 46, 2000 Maribor                                       
+% E-mail: miha.ravber@um.si                           
+% WWW: https://lpm.feri.um.si/en/members/ravber/    
+% Created: November 20, 2020 by Miha Ravber                                          
+% Modified: November 9, 2023 by Miha Ravber
+% Modified: February 21, 2024 by Miha Ravber                       
+% Use at your own risk :) 
+% Please submit your issues on the github page: https://github.com/Ravby/eswa-template
+
+
+\documentclass[review]{elsarticle}
+\makeatletter
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty
+ \let\@evenhead\@empty
+ \let\@oddfoot\@empty
+ \let\@evenfoot\@empty}
+\makeatother
+\graphicspath{ {./figures/} }
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{verbatim} %comments
+\usepackage{apalike}
+\restylefloat{figure}
+\floatstyle{plaintop} %table caption at top
+\restylefloat{table}
+
+
+
+%\journal{Expert Systems with Applications}
+
+%% For ESWA journal you need to use APA style
+\bibliographystyle{ieeetr}
+
+\begin{document}
+\begin{frontmatter}
+
+%The title page must contain the title of the paper and the full name/full affiliation with country/e-mail address for each author and co-author of the manuscript. Please make sure you have included all elements listed below with your manuscript submission.
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+\textbf{ \large COMP90055: Research Project (25pt)}
+
+\textbf{ \large Ambiguous LLM}
+\vspace{1.5cm}
+
+% Author names and affiliations
+\textbf{Author:} \\
+Jule Valendo Halim - 1425567 \\
+
+\hspace{10pt}
+
+\small  
+
+\begin{comment}
+Clearly indicate who will handle correspondence at all stages of refereeing and publication, also post-publication. Ensure that phone numbers (with country and area code) are provided in addition to the e-mail address and the complete postal address. Contact details must be kept up to date by the corresponding author.
+\end{comment}
+
+\vspace{1cm}
+\textbf{Supervisor:} \\
+Dr. Ting Dang \\
+      
+\end{center}
+\end{titlepage}
+\section*{Declaration}
+
+I certify that:
+\begin{itemize}
+    \item this thesis does not incorporate without acknowledgement any material previously submitted for a degree or diploma in any university; and that to the best of my knowledge and belief it does not contain any material previously published or written by another person where due reference is not made in the text.
+    \item where necessary I have received clearance for this research from the University's Ethics Committee and have submitted all required data to the School.
+    \item the thesis is ...... words in length (excluding text in images, tables, bibliographies, and appendices).
+\end{itemize}
+
+\newpage
+
+\section*{Acknowledgements}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\title{Expert Systems with Applications \LaTeX\ template}
+
+\begin{abstract}
+
+\end{abstract}
+
+\begin{keyword}
+
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+\label{introduction}
+
+
+\section{Background}
+\label{background}
+
+
+\begin{table}[H]
+\caption{Table caption.}
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+Algorithm & Measure 1 & Measure 2 & Measure 3 \\ \hline
+ALG1 &-1.0000&0.3301&-0.0000 \\ \hline
+ALG2 & -0.8897 &0.9308&0.9061 \\ \hline
+ALG3 & -0.8335&0.8361&0.6983 \\ \hline
+ALG4 & -0.5835&0.8785&0.7155 \\ \hline
+ALG5 & -0.8140&0.7447&0.6028 \\ \hline
+\end{tabular}
+
+\end{table}
+
+For textual citations use \textbackslash cite\{\}. \cite{art}
+
+\section*{Data availability}
+Provide a link to your data if available.
+
+\bibliography{sample}
+
+\end{document}
